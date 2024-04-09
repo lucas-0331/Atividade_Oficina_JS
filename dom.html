@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="font-[Ubuntu]">
+
+    <header class="min-h-screen bg-[url('img/header-bg.png')] bg-cover bg-center bg-fixed">
+        <div class="flex items-center justify-center min-h-screen flex-col">
+            <h1 class="text-8xl text-white font-bold"> JAVASCRIPT </h1>
+            <h2 class="text-4xl text-white mt-5"> DOM, Manipulação e Eventos </h2>
+            <button
+                class="border-4 rounded border-white text-white mt-10 text-4xl py-2 px-4 shadow-md shadow-neutral-500 font-bold hover:shadow-none hover:bg-white hover:text-black transition">
+                <a href="#dom">START</a> 
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="min-h-screen bg-slate-100 flex justify-center items-center flex-col py-5" id="dom">
+            <h1 class="text-4xl text-center text-gray-600"> DOM - Data Object Model </h1>
+            <figure class="mt-3">
+                <img src="img/dom.png" class="shadow-md" alt="">
+            </figure>
+        </section>
+        <section class="py-5 bg-slate-100">
+            <h1 class="text-4xl text-center text-gray-600"> Manipulação de Elementos </h1>
+                <div class="flex flex-col items-center w-5/5 mt-10">
+                    <div class="flex w-[90%] justify-center p-5"> 
+                        <div class="bg-slate-200 shadow-lg w-3/6 h-[250px] flex justify-center items-center text-5xl text-gray-400 card mr-4" id="card-1"> Card 1 </div>
+                        <div class="bg-slate-200 shadow-lg w-3/6 h-[250px] flex justify-center items-center text-5xl text-gray-400 card" id="card-2"> Card 2 </div>
+                    </div>
+                    <div class="flex w-[90%] justify-center p-5"> 
+                        <div class="bg-slate-200 shadow-lg w-3/6 h-[250px] flex justify-center items-center text-5xl text-gray-400 card mr-4" id="card-3"> Card 3 </div>
+                        <div class="bg-slate-200 shadow-lg w-3/6 h-[250px] flex justify-center items-center text-5xl text-gray-400 card" id="card-4"> Card 4 </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+</body>
+
+</html>
