@@ -1,90 +1,93 @@
-// Manipulando a DOM
+// // Manipulando a DOM
 
-// Selecionando elementos
+// // Selecionando elementos
 
-// getElementById
+// // getElementById
 
-const card1 = document.getElementById('card-1');
+// const card1 = document.getElementById('card-1');
 
-console.log("getElementById - Card 1: ");
-console.log(card1);
+// console.log("getElementById - Card 1: ");
+// console.log(card1);
 
-// getElementsByClassName
+// // getElementsByClassName
 
-const cards = document.getElementsByClassName('card');
+// const cards = document.getElementsByClassName('card');
 
-console.log("getElementsByClassName - Cards: ");
-console.log(cards);
+// console.log("getElementsByClassName - Cards: ");
+// console.log(cards);
 
-// getElementsByTagName
+// // getElementsByTagName
 
-const divs = document.getElementsByTagName('div');
+// const divs = document.getElementsByTagName('div');
 
-console.log("getElementsByTagName - Divs: ");
-console.log(divs);
+// console.log("getElementsByTagName - Divs: ");
+// console.log(divs);
 
-// querySelector
+// // querySelector
 
-//id
+// //id
 
-const card2 = document.querySelector('#card-2');
+// const card2 = document.querySelector('#card-2');
 
-console.log("querySelector (id) - Card 2: ");
+// console.log("querySelector (id) - Card 2: ");
 
-console.log(card2);
+// console.log(card2);
 
-//class
+// //class
 
-const card = document.querySelector('.card');
+// const card = document.querySelector('.card');
 
-console.log("querySelector (first class) - Card: ");
-console.log(card);
+// console.log("querySelector (first class) - Card: ");
+// console.log(card);
 
-//all classes
+// //all classes
 
-const allCards = document.querySelectorAll('.card');
+// const allCards = document.querySelectorAll('.card');
 
-console.log("querySelectorAll - All Cards: ");
+// console.log("querySelectorAll - All Cards: ");
 
-console.log(allCards);
+// console.log(allCards);
 
-//tag
+// //tag
 
-const domImg = document.querySelector('#dom img');
+// const domImg = document.querySelector('#dom img');
 
-console.log("querySelector usando hierarquia - DOM Image: ");
+// console.log("querySelector usando hierarquia - DOM Image: ");
 
-console.log(domImg);
+// console.log(domImg);
 
-// Propriedades dos objetos 
+// // Propriedades dos objetos 
 
-//Cada um dos objetos da dom tem propriedades e métodos diferentes que podem ser acessados e manipulados
-// através do ponto (.) após o objeto selecionado
+// //Cada um dos objetos da dom tem propriedades e métodos diferentes que podem ser acessados e manipulados
+// // através do ponto (.) após o objeto selecionado
 
-//textContent
+// //textContent
 
-const cardI = document.querySelector('#card-1');
+// const cardI = document.querySelector('#card-1');
 
-cardI.textContent = "Texto alterado com textContent";
+// cardI.textContent = "Texto alterado com textContent";
 
-//innerHTML
+// //innerHTML
 
-const cardIII = document.querySelector('#card-3');
+// const cardIII = document.querySelector('#card-3');
 
-cardIII.innerHTML = "<button class='border-2 border-black'> Botão criado com innerHTML </button>";
+// cardIII.innerHTML = "<button class='border-2 border-black'> Botão criado com innerHTML </button>";
 
-//style
+// //style
 
-const cardIV = document.querySelector('#card-4');
+// const cardIV = document.querySelector('#card-4');
 
-cardIV.style.backgroundColor = "blue";
+// cardIV.style.backgroundColor = "blue";
 
+/*
 //classList
 
 const cardII = document.querySelector('#card-2');
 cardII.classList.add('border-2', 'border-black');
 
+*/
 
+/*
 //getAttribute
 
 const startButton = document.querySelector('#start-button a');
@@ -92,8 +95,13 @@ const startButton = document.querySelector('#start-button a');
 console.log("getAttribute - Start Button: ");
 console.log(startButton.getAttribute('href'));
 
+*/
+
+/*
 //setAttribute
 console.log("setAttribute - Start Button: ");
 startButton.setAttribute('href', 'https://www.google.com');
+*/
+
 
 
