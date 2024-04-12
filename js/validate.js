@@ -15,6 +15,13 @@ formOficina.addEventListener('submit', function(e) {
 
 function validarFormulario(){
 
+    let validacaoObrigatorio = validarObrigatorio();
+
+    if (!validacaoObrigatorio.status) {
+        exibeMensagem(validacaoObrigatorio.mensagem);
+        return false;
+    }
+
     let validacaoIdade = validarIdade();
 
     if (!validacaoIdade.status) {
@@ -24,6 +31,31 @@ function validarFormulario(){
 
     return true;
 
+}
+
+function validarObrigatorio() {
+    
+    campos = document.querySelectorAll('.obrigatorio');
+
+    for (let campo of campos) {
+        if (campo.value == '') {
+
+            campoName = campo.getAttribute('name');
+
+            let validacao = {
+                status: false,
+                mensagem: `O campo ${campoName} é obrigatório`
+            }
+            return validacao;
+        }
+    }
+
+    let validacao = {
+        status: true,
+        mensagem: ''
+    }
+
+    return validacao;
 }
 
 function validarIdade(){
