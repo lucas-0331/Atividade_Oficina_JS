@@ -83,3 +83,16 @@ body {
     font-weight:bold;
     margin-bottom: 10px;
 }
+
+input:checked ~ .w-11 {
+    background-color: #4CAF50;
+}
+
+input:checked ~ .absolute {
+    transform: translateX(100%);
+}
+
+.campo_obrigatorio::after {
+    content: "*";
+    color: red;
+}

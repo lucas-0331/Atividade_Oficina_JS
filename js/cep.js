@@ -1,5 +1,4 @@
 function getCity(cep) {
-
     const cidade = document.querySelector("#cidade");
     const estado = document.querySelector("#estado");
     const rua = document.querySelector("#rua");
@@ -9,33 +8,45 @@ function getCity(cep) {
     bairro.removeAttribute("readonly");
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        cidade.value = data.localidade;
-        estado.value = data.uf;
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
 
-        if (data.logradouro !== undefined) {
-            rua.value = data.logradouro;
-            rua.setAttribute("readonly", "readonly");
-        }
+            if (data.erro || !data.localidade || !data.uf) {
+                cidade.value = '';
+                estado.value = '';
+                rua.value = '';
+                bairro.value = '';
 
-        if (data.bairro !== undefined) {
-            bairro.value = data.bairro;
-            bairro.setAttribute("readonly", "readonly");
-        }
+                alert('CEP inválido ou não encontrado.');
 
-    })
-    .catch(error => {
-        // Handle any errors here
-        console.error(error);
-    });
+                return;
+            }
 
+            cidade.value = data.localidade;
+            estado.value = data.uf;
 
+            if (data.logradouro) {
+                rua.value = data.logradouro;
+                rua.setAttribute("readonly", "readonly");
+            }
+
+            if (data.bairro) {
+                bairro.value = data.bairro;
+                bairro.setAttribute("readonly", "readonly");
+            }
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 
-// const cep = document.querySelector("#cep").value;
-
-document.querySelector("#cep").addEventListener("blur", function(){
-    getCity(this.value);
+document.querySelector("#cep").addEventListener("blur", function() {
+    const cep = this.value.replace(/\D/g, '');
+    if (cep.length === 8) {
+        getCity(cep);
+    } else {
+        alert('CEP deve ter 8 dígitos.');
+    }
 });
